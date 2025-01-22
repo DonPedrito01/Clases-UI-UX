@@ -1,0 +1,48 @@
+/*
+paleta de colores
+
+#ffffff
+#FEB338
+#a41307
+black
+#fdfff00d
+*/
+
+* {
+  /* selector universal */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*acomoda el tamaño de la caja segun el ancho y alto establecito sin aumentar*/
+}
+
+body {
+  font-family: "Poppins", serif;
+}
+header {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: #01011d;
+  background-image: linear-gradient(50deg, #fdfff00d 60%, #a41407ad),
+    url(../img/road-1072821_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  /*padding: 0.1;*/
+}
+
+.title {
+  background-color: #e7dadfe0;
+  width: 30%;
+  height: 100px;
+  margin: auto;
+  margin-top: calc(30vh - 50px);
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  color: red;
+}
+/*
+cual es la diferencia entre un ancho 100% y un 100vw
+buscar paleta de colores minimo 5 max 8
+*/
