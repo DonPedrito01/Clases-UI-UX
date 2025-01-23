@@ -18,9 +18,10 @@ black
 body {
   font-family: "Poppins", serif;
 }
+
 header {
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh );
   background-color: #01011d;
   background-image: linear-gradient(50deg, #fdfff00d 60%, #a41407ad),
     url(../img/road-1072821_1280.jpg);
@@ -41,6 +42,13 @@ header {
   font-weight: 300;
   text-align: center;
   color: red;
+}
+
+a:link{
+  color: black;
+}
+a:visited{
+  color: blueviolet;
 }
 /*
 cual es la diferencia entre un ancho 100% y un 100vw
