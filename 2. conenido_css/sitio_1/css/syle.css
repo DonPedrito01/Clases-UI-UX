@@ -21,7 +21,7 @@ body {
 
 header {
   width: 100%;
-  height: calc(100vh );
+  height: calc(100vh);
   background-color: #01011d;
   background-image: linear-gradient(50deg, #fdfff00d 60%, #a41407ad),
     url(../img/road-1072821_1280.jpg);
@@ -37,7 +37,7 @@ header {
   width: 30%;
   height: 100px;
   margin: auto;
-  margin-top: calc(30vh - 50px);
+  /* margin-top: calc(30vh - 50px); */
   font-size: 2rem;
   font-weight: 300;
   text-align: center;

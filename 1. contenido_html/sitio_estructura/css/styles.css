@@ -1,0 +1,40 @@
+.box1{
+    background-color: blueviolet;
+    color: aliceblue;
+    border: 1px solid yellow ;
+}
+
+.box2{
+    background-color: blueviolet;
+    color: rgb(240, 0, 0);
+    border: 1px solid yellow ;
+}
+
+table{
+    border-radius: 0;
+}
+.titulo{
+    background-color: burlywood;
+    color: black;
+}
+
+.encabezado{
+    background-color: rgb(255, 184, 91);
+}
+.hora{
+    background-color: rgb(255, 184, 91);
+}
+.materia{
+    background-color: rgb(255, 226, 187);
+}
+tfoot, th{
+    padding: 5px;
+    text-align: center; 
+}
+tfoot{
+    text-align: right;
+}
+.foot{
+    background-color: rgb(255, 226, 187);
+    color: black;
+}
