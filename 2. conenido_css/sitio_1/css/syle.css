@@ -12,44 +12,166 @@ black
   /* selector universal */
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /*acomoda el tamaño de la caja segun el ancho y alto establecito sin aumentar*/
+  box-sizing: border-box; 
+  /*acomoda el tamaño de la caja segun el ancho y alto establecito sin aumentar*/
 }
 
 body {
   font-family: "Poppins", serif;
 }
 
-header {
+.header {
   width: 100%;
-  height: calc(100vh);
+  height: calc(100vh - 80px);
   background-color: #01011d;
   background-image: linear-gradient(50deg, #fdfff00d 60%, #a41407ad),
-    url(../img/road-1072821_1280.jpg);
+    url(../assets/img/road-1072821_1280.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  /*padding: 0.1;*/
+  padding: 0.1;
+
+  .title {
+    background-color: #e7dadfe0;
+    width: 30%;
+    height: 100px;
+    margin: auto;
+    /* margin-top: calc(30vh - 50px); */
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    color: red;
+  }
+
+  
 }
 
-.title {
-  background-color: #e7dadfe0;
-  width: 30%;
-  height: 100px;
-  margin: auto;
-  /* margin-top: calc(30vh - 50px); */
-  font-size: 2rem;
-  font-weight: 300;
+.menu{
+  width: 100%;
+  margin:auto;
   text-align: center;
-  color: red;
+  font-size: 15px;
+
+  a{
+    color:#8a4e00;
+  }
+
+  ul>li{
+    list-style: none;
+    display: inline-block;
+    padding: 2% 6%;
+    background-color: #e7dadfc3;
+    margin-top: 2px ;
+    border-radius: 15px;
+  }
 }
 
-a:link{
+.enter{
+  text-align: right;
+  padding-right: 5%;
+  margin-top: 5%;
+
+  .login{
+    display: inline-block;
+    padding: 5%;
+    background-color: #e7dadfc3;
+    color: #a41407ad;
+    text-transform: lowercase;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 19px;
+    font-weight: 800;
+  }
+}
+
+.container{
+  background: linear-gradient(50deg, #ffffff, #feb338);
+  padding: 1.5% 0;
+  .flower{
+    margin: 0 auto;
+    text-align: center;
+
+  }
+}
+
+.flower{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sub-title{
+  text-align: center;
+  letter-spacing: 3px;
+  text-shadow: 7px 5px 5px #632626;
+}
+
+.img-s1{
+  width: 45%;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.legend{
+  text-align: left;
+  padding: 1%;
+}
+ 
+.footer{
+  width: 100%;
+  height: auto;
+  /* background: linear-gradient(45deg, #732626, #a41407 60% #8a4e0050); */
+  background: linear-gradient(45deg, #732626, #a41407);
+
+}
+
+.footer a{
+  color: #d2d7de;
+  padding: 3%;
+}
+
+.text-nets{
+  font-size: 20px;
+  display: inline-block;
+  padding: 5%;
+  width: 48%;
+  color: #d2d7de
+}
+
+.nets{
+  width: 50%;
+  display: inline-block;
+  text-align: end;
+  font-size: 25px;
+}
+
+.medio{
+  width: 100%;
+  height: 160px;
+}
+
+.copy{
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(45deg, #f3f3f344 60% #8a4e0050);
+  text-align: center;
+  color: #d2d7de;
+}
+
+/* a:link{
   color: black;
 }
 a:visited{
   color: blueviolet;
 }
+
+ */
+
+
+
 /*
 cual es la diferencia entre un ancho 100% y un 100vw
 buscar paleta de colores minimo 5 max 8
