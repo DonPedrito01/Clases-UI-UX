@@ -9,6 +9,7 @@ const btnAvg = document.createElement('button');
 btnAvg.type = 'button';
 btnAvg.textContent = 'Promedio';
 btnAvg.className = 'btn btn-info';
+btnAvg.id = 'btn-promedio';
 
 // generar evento por la propiedad addeventlistener
 
@@ -29,8 +30,12 @@ btnOK.addEventListener('click', ()=>{
                 input.className = 'form-control';
                 div.appendChild(input);
                 listNotes.appendChild(div);
+            
             }
             listNotes.appendChild(btnAvg);
+        }
+        else{
+            alert('Ingrese un numero entre 2 y 10');
         }
     }
     else{
@@ -38,17 +43,44 @@ btnOK.addEventListener('click', ()=>{
     }
 });
 
+const listaPromedio = document.getElementById('listaPromedio');
+const seccion = document.createElement('section');
+const p = document.createElement('p');
+
+document.body.appendChild(seccion);
+
+seccion.className = "container";
+seccion.style = "border-radius: 5px; text-center; background: aquamarine; margin: 20px auto;"
+p.className = "text-center";
+
+
 // generar evento por propiedad
 
-btnAvg.onClick = function(){
-    let arrayInput = document.querySelectorAll('#nota');
-    let avg = 0;
-    arrayInput.forEach((input)=>{
-        avg += parseFloat(input.value);
-    }); 
-    avg = avg / arrayInput.length;
-    alert (`El promedio es: ${avg}`);
-}
+btnAvg.addEventListener('click', () => {
+    let notas = document.querySelectorAll('#nota');
+    let bandera = true;
+    let suma = 0;
+
+    notas.forEach(input => {
+        let valor = parseFloat(input.value);
+        if (isNaN(valor) || valor < 0 || valor > 5) {
+            bandera = false;
+        } else {
+            suma += valor;
+        }
+    });
+    if (!bandera) {
+        alert("Ingrese valores entre 0 y 5 correctamente.");
+    } else {
+        let promedio = suma / notas.length;
+        seccion.appendChild(p);
+        seccion.textContent = `El promedio es: ${promedio}`;
+
+    }
+});
 
 // el promedio tenemos que mostrarlo con un section que se llame resultado del promedio
 // validar rango de notas y que sean numeros
+
+
+
