@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Eventos</title>        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 class="estiloRed">Mouse y Teclado</h1>
+        <p id="parrafo" class="parrafo" onmouseover="capturaMouseOver()">Las funciones o métodos son acciones que se pueden
+        realizar, con cada uno de los elementos html. Las
+        propiedades son valores de los elementos HTML que pueden
+        ser asignadas o modificadas.</p>
+        <p id="pregunta" class="parrafo" onmousemove="capturaMove()">¿Está de Acuerdo con la afirmación anterior? SI o NO</p>
+        <p id="indicacion">Colocar la respuesta en la caja de texto</p>
+        <input type="text" id="respuesta" name="respuesta" onkeydown="funcionInput()"  ><br><br>
+        <button id="confirmar" name="btnRespuesta" onclick="capturaClick()">Enviar Respuesta</button>        
+        <button id="teclado">Presiona con una tecla</button>
+       
+        <script src="raton.js"></script>
+        <script src="teclado.js"></script>
+       
+    </body>
+</html>
