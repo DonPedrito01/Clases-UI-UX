@@ -344,3 +344,31 @@ input:focus, .msn:focus {
     color: #f2f2f2;
     padding: 2%;
 }
+
+@media (min-width: 768px) and (max-width: 1000px){
+  .menu > li{
+    display: inline-block;
+    padding: 1.0% 2.2
+    0%;
+
+    background-color: #A60815;
+    margin-top: 0.8%;
+    margin-bottom: 1.8%;
+    border-radius: 10px;
+    color: #f2f2f2;
+    font-size: 22px;
+}
+
+.title{
+  font-size: 3.2em;  /* tamaño de la fuente que es -> 16px */
+  margin-top: 1%;
+  color: #f2f2f2;
+}
+
+.btn_enviar{
+  width: 35%;
+  margin-top: 2.6%;
+  padding: 8px 20px;
+}
+}
+
