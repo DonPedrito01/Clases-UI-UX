@@ -32,8 +32,8 @@ function modalAlert (cad, tipo, person){
     
     if(tipo === "aceptar"){
         const btnEnviar = document.createElement("input");
-        btnCerrar.setAttribute ("type", "button");
-        btnCerrar.setAttribute ("class", "btnAlerta"); 
+        btnEnviar.setAttribute ("type", "button");
+        btnEnviar.setAttribute ("class", "btnAlerta"); 
         btnEnviar.setAttribute ("value", "Enviar");
         alerta.appendChild(btnEnviar);
         document.body.appendChild(alerta);
@@ -59,10 +59,10 @@ const paintCard = (datos, tipo)=>{
     if(tipo === "ESTUDIANTE"){
         let cloneTempl = templateStudent.cloneNode(true);
         cloneTempl.querySelector(".title-card").innerHTML = "DATOS DEL PQR <hr>";
-        cloneTempl.querySelector(".data-card").innerHTML = `NOMBRES Y APELLIDOS ${datos.nombres} ${datos.apellidos}`;
-        cloneTempl.querySelector(".text-mail").innerHTML = `CORREO  ELECTRONICO ${datos.correo}`;     
-        cloneTempl.querySelector(".text-telefono").innerHTML = `NUMERO DE TELEFONO ${datos.telefono}`;
-        cloneTempl.querySelector(".text-msn").innerHTML = `MENSAJE DE TEXTO ${datos.mensaje} `;
+        cloneTempl.querySelector(".data-card").innerHTML = `NOMBRES Y APELLIDOS: ${datos.nombres} ${datos.apellidos}`;
+        cloneTempl.querySelector(".text-mail").innerHTML = `CORREO  ELECTRONICO: ${datos.correo}`;     
+        cloneTempl.querySelector(".text-telefono").innerHTML = `NUMERO DE TELEFONO: ${datos.telefono}`;
+        cloneTempl.querySelector(".text-msn").innerHTML = `MENSAJE DE TEXTO: ${datos.mensaje} `;
 
         fragmento.appendChild(cloneTempl);
     }

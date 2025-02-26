@@ -14,13 +14,13 @@
         btnAumentar.addEventListener('click', () => {
             if (tamFuente <= 34){
                 tamFuente += 1; //tamFuente = tamFuente + 1; 
-                document.body.style.fontSize = `${tamFuente}px`;    
+                document.body.style.fontSize = `${tamFuente}px` ;    
             }});
 
             btnDisminuir.addEventListener('click', () => {
                 if (tamFuente >= 14){
                     tamFuente -= 1;
-                    document.body.style.fontSize = `${tamFuente}px`; 
+                    document.body.style.fontSize = `${tamFuente}px` ; 
                 }
             });
 
