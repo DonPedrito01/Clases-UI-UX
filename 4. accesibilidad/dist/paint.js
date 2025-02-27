@@ -10,7 +10,7 @@ const addStudent = (name, lastNames, mail, telephone, msn) => {
         telefono: telephone,
         mensaje: msn
     };
-    let text = `¿Esta segur@ ${person.nombres} esta seguro de enviar la peticion?`;
+    let text = `¿Esta segur@ ${person.nombres} de enviar la peticion?`;
     modalAlert(text, "aceptar", person);
 }
 
