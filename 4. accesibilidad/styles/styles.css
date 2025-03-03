@@ -24,7 +24,7 @@ body{
 
 .container_header{
     width:100%;
-    height: 41%;
+    height: auto;
     background-color: #402319;
     background-image: linear-gradient(10deg, #4023198a, #A60815ab, #4b49499c ),
     url(../img/manos-tocandose.jpg);
@@ -33,6 +33,7 @@ body{
     background-attachment: fixed;
     background-position: center;
     padding: 0.1px;
+    padding-bottom: 4%; 
 }
 
 .menu{
@@ -92,6 +93,8 @@ hr{
     border-radius: 10px;
     padding: 2% 1%;
     text-align: center;
+
+    max-width: 500px;
 }
 
 .fm_contact > hr {
@@ -168,14 +171,15 @@ input:focus, .msn:focus {
     margin: 3%;
     text-align: center;
   }
+
   .copy {
     width: 30%;
     height: auto;
     color: #f2f2f2;
     line-height: 40px;
   }
-  .my_nets,
-  .map {
+
+  .my_nets, .map {
     width: 30%;
     height: auto;
   }
@@ -345,30 +349,204 @@ input:focus, .msn:focus {
     padding: 2%;
 }
 
-@media (min-width: 768px) and (max-width: 1000px){
+
+@media (max-width: 450px){
+  
+  .menu{
+    text-align: center;
+    margin: 1%;
+  }
+
+  .menu > li{
+    display: flex;
+    flex-direction: column;
+    margin: 1% 10%;
+  }
+
+  hr{
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .title{
+
+    /* font-size: 2.6em;  tamaño de la fuente que es -> 16px */
+    margin-top: 2%;
+    font-size: 2.4em;
+  }
+
+  .fm_contact{
+    width: 90%;
+    height: auto;
+    margin: 2% auto;
+    border: 5px solid #402319;
+    /*background-image: linear-gradient(10deg, #402319db,#a60815);*/
+    border-radius: 10px;
+    padding: 2% 1%;
+    text-align: center;
+  }
+
+  .btn_enviar, .btnRegistrar, .btnCancelar {
+    width: 80%;
+  }
+  
+  .footer {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .copy {
+    line-height: 20px;
+  }
+
+  .nets {
+    width: 27px;
+  }
+
+  .title_about {
+    margin: 3% 0;
+    padding: 1%;
+  }
+
+  .title_nets {
+    margin: 3% 0;
+    padding: 1%;
+  }
+
+  .title_ubi {
+    margin: 3% 0;
+    padding: 1%;
+  }
+
+}
+
+ @media (min-width:451px) and (max-width:719px){ /*@media (min-width:375px) and (max-width:719px)  movil medio 2.8 */
+
+  .menu{
+    text-align: center;
+    margin: 1%;
+  }
+
   .menu > li{
     display: inline-block;
-    padding: 1.0% 2.2
-    0%;
+    padding: 1.2% 2.2%;
 
     background-color: #A60815;
-    margin-top: 0.8%;
-    margin-bottom: 1.8%;
+    margin-top: 1%;
+    margin-bottom: 2%;
     border-radius: 10px;
     color: #f2f2f2;
-    font-size: 22px;
+    font-size: 20px;
 }
 
-.title{
-  font-size: 3.2em;  /* tamaño de la fuente que es -> 16px */
-  margin-top: 1%;
-  color: #f2f2f2;
+  hr{
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .title{
+
+    /* font-size: 2.6em;  tamaño de la fuente que es -> 16px */
+    margin-top: 2%;
+    font-size: 2.4em;
+  }
+
+  .fm_contact{
+    width: 90%;
+    height: auto;
+    margin: 2% auto;
+    border: 5px solid #402319;
+    /*background-image: linear-gradient(10deg, #402319db,#a60815); */
+    border-radius: 10px;
+    padding: 2% 1%;
+    text-align: center;
+  }
+
+  .btn_enviar, .btnRegistrar, .btnCancelar {
+    width: 80%;
+  }
+  
+  .footer {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .copy {
+    line-height: 20px;
+  }
+
+  .nets {
+    width: 27px;
+  }
+
+  .title_about {
+    margin: 3% 0;
+    padding: 1%;
+  }
+
+  .title_nets {
+    margin: 3% 0;
+    padding: 1%;
+  }
+
+  .title_ubi {
+    margin: 3% 0;
+    padding: 1%;
+  }
+
+} 
+
+@media (min-width:720px) and (max-width:1365px){ /* smartphone grande 3.1 */
+
+  .menu{
+    text-align: center;
+    margin: 1%;
+  }
+
+  .title{
+
+    /* font-size: 2.6em;  tamaño de la fuente que es -> 16px */
+    margin-top: 2%;
+    font-size: 2.8em;
+  }
 }
 
-.btn_enviar{
-  width: 35%;
-  margin-top: 2.6%;
-  padding: 8px 20px;
-}
+@media (min-width:1366) and (max-width:1439px){ /* ordenador de portatil medio 3.3 */
+
+
 }
 
+@media (min-width:1440px) and (max-width:1919px){ /* ordenador de escritorio medio 3.5 */
+
+
+}
+
+@media (min-width:1920px) { /* pc de escritorio grande 3.5 */
+
+
+}
+
+
+/*
+  medidas de la pantalla 
+
+
+
+
+*/
