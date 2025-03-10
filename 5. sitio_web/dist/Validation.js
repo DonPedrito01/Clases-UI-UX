@@ -4,9 +4,9 @@ class Validation {
     return input.match(regex) ? true : false;
   }
   validNames(cad) {
-    const nameRx =
-      /^([a-zA-ZÀ-ÖØ-öø-ÿ]{3,25})([\s]?)([a-zA-ZÀ-ÖØ-öø-ÿ]{0,25})$/g; //Rx expression regular
+    const nameRx = /^([a-zA-ZÀ-ÖØ-öø-ÿ]{3,25})([\s]?)([a-zA-ZÀ-ÖØ-öø-ÿ]{0,25})$/g; //Rx expression regular
     const response = this.inputValid(cad, nameRx);
+    return response;
   }
 
   validDocument(cad) {
@@ -24,6 +24,7 @@ class Validation {
   validForm = (object)=>{
     const valores = Object.values(object);
     const response = valores.findIndex(e => e === false);
+    return response;
   }
 }
 

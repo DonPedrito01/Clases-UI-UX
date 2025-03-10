@@ -184,6 +184,10 @@ body {
     text-decoration: underline;
 }
 
+.buscando{
+  cursor:pointer;
+}
+
 .buscarOculto {
     padding: 0;
     width: 0;
@@ -539,7 +543,7 @@ body {
   }
   .is-valid {
     background-color: #ffd1dc !important;
-    border-bottom: 1px solid #ff004e !important;
+    border-bottom: 1px solid #1d8bf1 !important;
   }
   .is-invalid {
     border-bottom: 5px solid #f81818 !important;
