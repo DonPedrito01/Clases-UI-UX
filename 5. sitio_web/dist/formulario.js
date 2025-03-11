@@ -12,22 +12,23 @@ const formulario = document.querySelector('#form');
 const btnSend = document.getElementById('btnSend');
 
 // objeto para validar cada uno de los inputs del formulario
-const formValid ={
-    nombre: false,
+const formValid = {
+    nombres: false,
     apellidos: false,
     correo: false,
-    politica: false,
-    documento: false    
+    documento: false,
+    politica: false,    
 }
 
 // validacion de cada uno de los elementos de cambio
 formulario.addEventListener ("change", (e)=>{
+
     const inputId = e.target.id;
-    console.log("Id de input: " + inputId);
+    console.log("Id de input: "+inputId);
     const inputValue = e.target.value;
-    console.log("Valor de input: " + inputValue);
-    const inputClass = e.target.ClassList;
-    console.log("Clase de input: "+ inputClass);
+    console.log("Valor de input: "+inputValue);
+    const inputClass = e.target.classList;
+    console.log("Clase de input: "+inputClass);
 
 
     //estilos de validación
@@ -63,7 +64,7 @@ formulario.addEventListener ("change", (e)=>{
             break;
         
         case "mail":
-            formValid.correo = validation.validMail(inputValue);
+            formValid.correo = validation.validMails(inputValue);
             if(formValid.correo){
                 validClass();
             }    
@@ -73,9 +74,9 @@ formulario.addEventListener ("change", (e)=>{
             console.log(Object.values(formValid));
             break;
          
-        case "document":
+        case "documento":
             formValid.documento = validation.validDocument(inputValue);
-            if(formValid.docuemento){
+            if(formValid.documento){
                 validClass();
             }    
             else{
@@ -83,6 +84,15 @@ formulario.addEventListener ("change", (e)=>{
             }
             console.log(Object.values(formValid));
             break;
-    
+        
+        case "checkPolitica":
+            formValid.politica = document.getElementById("checkPolitica").checked;
+            if (formValid.politica) {
+              validClass();
+            } 
+            else {
+              inValidClass();
+            }
+            break;
     }
 });
