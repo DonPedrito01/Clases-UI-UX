@@ -169,7 +169,7 @@ body {
     display: inline-block;
     padding: 0% 4%;
     list-style: none;
-    font-size: 20px;
+    font-size: 24px;
   }
   .item > li a {
     color: #000000;
@@ -214,13 +214,7 @@ body {
 }
 
 /*-------------------secccion principal--------------------------*/
-.main h1 {
-    width: 40%;
-    padding: 1%;
-    font-size: 52px;
-    font-weight: 500;
-    margin-top: 0.5%;
-}
+
 .main > .container_p {
     width: 100%;
     background-repeat: no-repeat;
@@ -236,17 +230,29 @@ body {
         rgba(241, 133, 149, 0.47) 20%
       ),
       url(../images/handbag.jpg);
+
+      padding-bottom: 2%;
+}
+
+.main h1 {
+  width: 100%;
+  padding: 1%;
+  font-size: 52px;
+  font-weight: 500;
+  margin-top: 0.5%;
+  padding: 0 4%;
 }
 
 .main .container_p .offert {
-    width: 80%; /*em->medida en base a la fuente: 16px*/
+    width: 100%; /*em->medida en base a la fuente: 16px*/
     font-size: 1.5rem;
     padding: 1%;
     text-align: justify;
+    padding: 0 4% 1%  ;
 }
 
 .main .container_p .container_button {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -254,6 +260,7 @@ body {
     justify-content: space-around;
     padding: 15px;
 }
+
 
 .container_button .button_lp {
     padding: 20px;
@@ -289,7 +296,7 @@ body {
 
   .containers {
     padding: 2%;
-    margin-top: 2%;
+
 }
 
   .container_up {
@@ -297,7 +304,7 @@ body {
 }
   
 .up {
-    width: 10%;
+    width: 20%;
     margin-top: 2%;
     padding: 20px;
     background-color: #ffd1dc;
@@ -386,7 +393,7 @@ body {
     background-color: #4b494911;
     padding: 3%;
     padding-bottom: 8%;
-    clip-path: polygon(0% 5%, 100% 0%, 100% 95%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
   }
   /**********************************services***********************************************/
   .service {
@@ -641,7 +648,7 @@ body {
     }
   }
   .items_map_site {
-    list-style: none;
+    /* list-style: none; */
     padding: 0;
     li {
       margin-bottom: 10px;
@@ -661,6 +668,7 @@ body {
     padding: 1%;
   }
   /********************Landing-Java*****************************************/
+  
   .body_landing{
     margin: 4%;  
     background-color: #ffeeee;
@@ -681,7 +689,7 @@ body {
    
    
   .wave-background {
-    background: linear-gradient(135deg, #ffd1dc, #ff004e);  
+    background: linear-gradient(364deg, #ffd1dc, #ff004e);  
    
     padding: 7% 10%;
     position: relative;
@@ -746,7 +754,7 @@ body {
   }
   
 
-  @media (max-width:480px){
+  /* @media (max-width:480px){
     .body_landing{
       margin: 4%;  
       height: 100%;  
@@ -779,5 +787,150 @@ body {
 
     }
 
+  } */
 
+  @media (max-width: 576px) {
+    /* Applies to small devices (landscape phones, tablets) */
+    .header {
+      position: static;
+    }
+
+    .pre-container{
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+    .header .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+      .logo img {
+        width: 25%;
+        margin: 0 auto;
+        border-radius: 30%;
+      }
+
+    }
+
+    .menu {
+      width: 100%;
+    }
+    .item{
+      display: flex;
+      align-items: center;
+      flex-direction: column ;
+    }
+
+    .item > li {
+      display: block;
+      padding: 0% 4%;
+      font-size: 22px;
+      width: 70%;
+      border: 1px solid #e0e0e0;
+      border-radius: 15px;
+      box-shadow: 0 6px 9px rgba(0, 0, 0, 0.1);
+      margin: 5px 0;
+    }
+
+  .item > li :hover {
+      color: #ff004e;
+      font-size: 20px;
+      
+  }
+  
+  .up{
+    width: auto;
+    padding: 25px;
+  }
+
+
+  .img_people{
+    width: 40%;
+    margin: 0;
+  }
+  .subTitle_services{
+    width: 50%;
+  }
+
+  .orden_service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .service{
+    width: 80%;
+    max-width: 80%;
+    max-height: 100%;
+    margin: 10px 0 ;
+    padding: 10px 5px;
+  }
+
+  .container_services {
+    clip-path: none;
+  }
+
+  .form{
+    width: 80%;
+  }
+
+  .container_history {
+    clip-path: none;
+  }
+
+  .img_women {
+    width: 40%;
+    border-radius: 50%;
+    margin: 0;
+    float: right;
+  }
+
+  .container_foot_map_dir{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map_site{
+    width: 100%;
+    text-align: center;
+    
+    .subTitle_enlace{
+      margin: 0 0 10px 0;
+    }
+  }
+
+  .direction{
+    width: 100%;
+    padding: 4%;
+  }
+
+}
+  @media all and (min-width: 577px) and (max-width: 768px) {
+    /* Applies to medium devices (tablets) */
+    body {
+      font-size: 1.2rem; /* Can further adjust font size for medium screens */
+    }
+  }
+  
+  @media all and (min-width: 769px) and (max-width: 992px) {
+    /* Applies to large devices (desktops) */
+    body {
+      font-size: 1.3rem; /* Customize font size for larger screens */
+    }
+  }
+  
+  @media all and (min-width: 993px) and (max-width: 1200px) {
+    /* Applies to extra large devices (large desktops) */
+    body {
+      font-size: 1.4rem; /* You can adjust font size for extra large screens */
+    }
+  }
+  
+  @media all and (min-width: 1201px) and (max-width: 1400px) {
+    /* Applies to extra extra large devices (very large desktops) */
+    body {
+      font-size: 1.5rem; /* Optional adjustment for very large screens */
+    }
   }
