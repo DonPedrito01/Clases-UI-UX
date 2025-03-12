@@ -1,0 +1,44 @@
+{
+    "name": "Kanelass Shop",
+    "short_name": "PWAKanelass",
+    "description": "Sitio web para la venta de accesorios de programacion",
+    "lang":"es-ES",
+    "start_URL": "./",
+    "scope":"./",
+    "theme_color":"#F18595",
+    "background_color": "#FFEEEE",
+    "display":"standalone",
+    "display_override":["window-controls-overlay"],
+    "edge_side_panel": {"enabled": true,
+                        "preferred": 400},
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "./5. sitio_web/assets/kanelas_CODE.jpg",
+            "sizes": "1080x1080",
+            "type":"image/jpg"
+        },
+        {
+            "src": "./5. sitio_web/assets/Kanelass128.png",
+            "sizes": "128x128",
+            "type":"image/png"
+        },
+        {
+            "src": "./5. sitio_web/assets/Kanelass256.png",
+            "sizes": "256x256",
+            "type":"image/png"
+        },
+        {
+            "src": "./5. sitio_web/assets/Kanelass512.png",
+            "sizes": "512x512",
+            "type":"image/png"
+        }
+    ],
+
+    "protocol_handlers": [
+        {
+            "protocol": "web+Kanelass",
+            "url": "./?cmd=%s"
+        }
+    ]
+}
