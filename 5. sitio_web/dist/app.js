@@ -9,6 +9,41 @@ const template = document.getElementById("template").content;
 
 // colocar las credenciales del API
 
+const user_name = "admin";
+const pass = "1234";
+
+// Obtener data de la API 
+
+async function getUserData(){
+    
+    try{
+        const credentials =  btoa(`${user_name}:${pass}`);
+        const resp = await axios.get(  URL_BASE + "datos" , {
+            headers: {Authorization: `Basic ${credentials}`}
+        });
+    const users = resp.data;
+    console.log(users);
+    return users;
+    }
+    catch (error){
+        console.error ("ERROR AL OBTENER DATOS: "+ error.message);
+    }
+}
+
+const data_users = await getUserData();
+const testTemplate = "content" in document .createElement ("template");
+
+if (testTemplate){
+    data_users.forEach(e =>{
+        template.querySelector("h3").innerHTML = `Usuario Num: ${e.datId}`;
+        template.querySelector("#document").innerHTML = `Documento num: ${e.datDocument} ${e.datNames} ${e.datNames}`;
+        template.querySelector("#mail") .innerHTML = `Correo ${e.datEmail}`;
+        const myItem = template.cloneNode(true);
+        fragment.appendChild(myItem);
+    });
+}
+
+listado.appendChild(fragment);
 
 // crear efecto del buscador
 buscando.addEventListener ('click',(e)=>{
@@ -21,3 +56,4 @@ buscando.addEventListener ('click',(e)=>{
         buscador.classList.add('buscarOculto');
     }
 });
+
